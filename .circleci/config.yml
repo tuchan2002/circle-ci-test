@@ -26,6 +26,10 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
+  deploy:
+    executor: docker/docker
+    steps:
+      - run: "./deploy.sh"
 
 workflows:
   test-build-deploy:
@@ -38,3 +42,6 @@ workflows:
             branches:
               only:
                 - master
+      - deploy:
+          requires:
+            - build-and-push
