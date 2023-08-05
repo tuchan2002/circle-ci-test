@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  my_react_website:
+    image: tuchan17/circle-ci-test:latest
+    container_name: my_react_website
+    ports:
+      - "8080:80"
