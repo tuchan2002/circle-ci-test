@@ -5,6 +5,15 @@ orbs:
   docker: circleci/docker@2.2.0
 
 jobs:
+  eslint:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run lint
+          name: Run Lint
   build-and-push:
     environment:
       DOCKER_IMAGE: tuchan17/circle-ci-test
@@ -30,9 +39,11 @@ jobs:
 workflows:
   test-build-deploy:
     jobs:
+      - eslint
       - node/test
       - build-and-push:
           requires:
+            - eslint
             - node/test
           filters:
             branches:
