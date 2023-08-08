@@ -38,7 +38,6 @@ jobs:
   deploy:
     executor: docker/docker
     steps:
-      - checkout
       - add_ssh_keys:
           fingerprints:
             - "77:37:76:3d:01:ed:84:13:05:cd:68:79:a5:5e:d3:fc"
