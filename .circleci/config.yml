@@ -37,8 +37,6 @@ jobs:
             echo "Digest is: $(</tmp/digest.txt)"
   deploy:
     executor: docker/docker
-    machine:
-        enabled: true
     steps:
       - checkout
       - add_ssh_keys:
