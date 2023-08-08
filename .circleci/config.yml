@@ -44,7 +44,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -oStrictHostKeyChecking=no trananhtu@14.225.254.2 "./deploy.sh"
+            ssh -oStrictHostKeyChecking=no root@14.225.254.2 "./deploy2.sh"
 workflows:
   test-build-deploy:
     jobs:
