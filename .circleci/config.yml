@@ -37,8 +37,6 @@ jobs:
             echo "Digest is: $(</tmp/digest.txt)"
   deploy:
     executor: docker/docker
-    machine:
-      image: ubuntu-2004:current
     steps:
       - add_ssh_keys:
           fingerprints:
