@@ -40,12 +40,11 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "77:37:76:3d:01:ed:84:13:05:cd:68:79:a5:5e:d3:fc"
-      - run: ping 192.168.1.66
+            - "be:95:0b:00:7a:cb:03:df:29:28:a9:65:10:81:b4:ff"
       - run:
           name: Deploy Over SSH
           command: |
-            ssh -oStrictHostKeyChecking=no -vvv -p 22 trananhtu@192.168.1.66 "./deploy.sh"
+            ssh -oStrictHostKeyChecking=no trananhtu@14.225.254.2 "./deploy.sh"
 workflows:
   test-build-deploy:
     jobs:
