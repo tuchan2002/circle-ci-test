@@ -38,7 +38,7 @@ jobs:
   deploy:
     executor: docker/docker
     machine:
-      enabled: true
+        enabled: true
     steps:
       - add_ssh_keys:
           fingerprints:
