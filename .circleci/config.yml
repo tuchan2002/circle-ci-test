@@ -42,7 +42,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "69:37:8f:76:7d:be:cc:d6:84:42:6b:41:66:18:41:dc"
-      - run: ssh -oStrictHostKeyChecking=no -v 'tuchanvnu-testgitpod-gb0khs8e87p@tuchanvnu-testgitpod-gb0khs8e87p.ssh.ws-us102.gitpod.io' "./deploy.sh"
+      - run:
+          command: |
+            ssh -oStrictHostKeyChecking=no -v 'tuchanvnu-testgitpod-gb0khs8e87p@tuchanvnu-testgitpod-gb0khs8e87p.ssh.ws-us102.gitpod.io' "./deploy.sh"
 
 workflows:
   test-build-deploy:
