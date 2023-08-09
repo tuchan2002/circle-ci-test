@@ -41,8 +41,9 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "60:61:55:91:c3:0d:d6:8d:f0:80:16:07:23:8b:27:e9"
-      - run: ssh -oStrictHostKeyChecking=no -vvv root@14.225.254.2 "./deploy2.sh"            
+            - "77:37:76:3d:01:ed:84:13:05:cd:68:79:a5:5e:d3:fc"
+      - run: ssh -oStrictHostKeyChecking=no -vvv trananhtu@192.168.1.66 "./deploy.sh"
+
 workflows:
   test-build-deploy:
     jobs:
