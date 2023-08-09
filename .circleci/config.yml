@@ -36,15 +36,13 @@ jobs:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
   deploy:
-    executor: docker/docker
+    machine:
+      image: ubuntu-2004:current
     steps:
       - add_ssh_keys:
           fingerprints:
             - "60:61:55:91:c3:0d:d6:8d:f0:80:16:07:23:8b:27:e9"
-      - run:
-          name: Deploy Over SSH
-          command: |
-            ssh -oStrictHostKeyChecking=no -vvv root@14.225.254.2 "./deploy2.sh"
+      - run: ssh -oStrictHostKeyChecking=no -vvv root@14.225.254.2 "./deploy2.sh"            
 workflows:
   test-build-deploy:
     jobs:
