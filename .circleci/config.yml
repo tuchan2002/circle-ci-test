@@ -43,6 +43,7 @@ jobs:
           fingerprints:
             - "77:37:76:3d:01:ed:84:13:05:cd:68:79:a5:5e:d3:fc"
       - run: "sudo ufw status && sudo ufw disable"
+      - run: "ping 192.168.1.66"
       - run: ssh -oStrictHostKeyChecking=no -vvv trananhtu@192.168.1.66 "./deploy.sh"
 
 workflows:
