@@ -9,7 +9,7 @@ function App() {
                 <p>Hello World !</p>
                 <p>
                     Copyright by
-                    <a href='https://www.youtube.com/channel/UCL5vFihmuBo1D3A763gA5Gg'>TuChan</a>
+                    <a href='https://www.youtube.com/channel/UCL5vFihmuBo1D3A763gA5Gg'> TuChan</a>
                 </p>
             </header>
         </div>
